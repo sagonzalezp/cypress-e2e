@@ -1,0 +1,14 @@
+{
+  "name": "cypress-e2e-udemy-project",
+  "version": "1.0.0",
+  "description": "\"Complete automation project from udemy course Automated Sotware Testing wit Cypress 2020\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^5.1.0"
+  }
+}
