@@ -19,6 +19,6 @@ describe('Navbar test', ()=>{
 
     it('should display homepage content', ()=>{
         cy.get('.brand').click()
-
+        cy.url().should('include', 'index.html')
     })
 })
