@@ -7,10 +7,7 @@ describe('New Payee test', ()=>{
         cy.fixture('user').then(user => {
             const username = user.id;
             const password = user.pwd;
-            cy.get('[id="user_login"]').type(username)
-            cy.get('[id="user_password"]').type(password)
-            cy.get('[type="submit"]').click()
-            cy.url().should('include', 'bank/account-summary.html')
+            cy.login(username, password)
         })
         //Clicking on Pay Bills
         cy.get('#pay_bills_tab > a').click()

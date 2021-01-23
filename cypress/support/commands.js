@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add("login", (username, password) => {
+    cy.get('#user_login').type(username)
+    cy.get('#user_password').type(password)
+    cy.get('[type="submit"]').click()
+    cy.url().should('include', 'bank/account-summary.html')
+})
