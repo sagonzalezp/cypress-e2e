@@ -38,8 +38,9 @@ describe('New Payee test', ()=>{
     })
 
     it('should show a success message', ()=>{
-        cy.get('#alert_content').should('be.visible').and('include.text', 'The new payee Payee Name was successfully created.')
+        cy.fixture('payee').then(payee => {
+            const payeeName = payee.name;
+            cy.get('#alert_content').should('be.visible').and('include.text', `The new payee ${payeeName} was successfully created.`)
+        })
     })
-
-
 })
