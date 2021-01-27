@@ -24,7 +24,11 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-
+/**
+ * Login to the website
+ * @param {String} username - The user's username
+ * @param {String} password - The user's password
+ */
 Cypress.Commands.add("login", (username, password) => {
     cy.get('#user_login').type(username)
     cy.get('#user_password').type(password)
